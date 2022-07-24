@@ -8,6 +8,7 @@ def app():
     st.title("DEM Raura")
 
     dem = ee.Image('USGS/SRTMGL1_003')
+    table = ee.FeatureCollection("users/davidroncal123/AEA_RAURA")
 
     Map = geemap.Map()
     Map.add_basemap('HYBRID')
@@ -30,7 +31,7 @@ def app():
     "max": 5257.294794667802
     }
 
-    Map.addLayer(dem.clip(region), vis_params, 'STRM DEM', True, 1)
+    Map.addLayer(dem.clip(table), vis_params, 'STRM DEM', True, 1)
     Map
 
     # Add Earth Engine layers to Map
