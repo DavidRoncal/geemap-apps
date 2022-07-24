@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import home, basemaps, customize, datasets, opacity, nlcd_demo
+from apps import Raura
 
 st.set_page_config(layout="wide")
 
