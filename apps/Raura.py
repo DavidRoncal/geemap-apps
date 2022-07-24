@@ -11,7 +11,8 @@ def app():
     basemap = st.selectbox("Seleccionar un mapa base", keys)
     table = ee.FeatureCollection("users/davidroncal123/AEA_RAURA")
     
-    Map.centerObject(table, 10)
+    Map = geemap.Map()
+    Map = geemap.Map.centerObject(table, 11)
     Map.add_basemap(basemap)
     # Add Earth Engine dataset
     Raura_RGB = ee.Image('users/davidroncal123/Imagen_truecolor_geo')
