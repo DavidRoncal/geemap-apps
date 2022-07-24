@@ -2,7 +2,6 @@ import streamlit as st
 import geemap
 import os
 import ee
-ee.Initialize()
 
 def app():
     st.title("DEM Raura")
