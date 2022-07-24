@@ -9,10 +9,8 @@ def app():
     dem = ee.Image('USGS/SRTMGL1_003')
     table = ee.FeatureCollection("users/davidroncal123/AEA_RAURA")
 
-    Map = geemap.Map()
+    Map = geemap.Map(center=[-10.53,-76.7519], zoom=11)
     Map.add_basemap('HYBRID')
-    Map = geemap.Map.centerObject(table, 11)
-    
     
     # Set the region of interest by simply drawing a polygon on the map
     
