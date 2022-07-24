@@ -34,7 +34,7 @@ def app():
 
 
     # Add Earth Engine layers to Map
-    Map.addLayer(dem, vis_params2, 'STRM DEM', True, 0.7)
+    Map.addLayer(dem, vis_params2, 'STRM DEM', False, 0.7)
     Map.addLayer(Raura_RGB.clip(table), vis_params, 'Raura RGB')
     Map.addLayer(Raura_INF.clip(table), vis_params, 'Raura Infrarojo')
-    Map.to_streamlit()
+    Map.to_streamlit(height=800)
