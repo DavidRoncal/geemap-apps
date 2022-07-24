@@ -52,9 +52,9 @@ class MultiApp:
         functions = [a["function"] for a in self.apps]
         default_radio = titles.index(app_state["page"]) if "page" in app_state else 0
 
-        st.sidebar.title("Navigation")
+        st.sidebar.title("Panel de Navegación")
 
-        title = st.sidebar.radio("Go To", titles, index=default_radio, key="radio")
+        title = st.sidebar.radio("Elegir ventana:", titles, index=default_radio, key="radio")
 
         app_state["page"] = st.session_state.radio
         # st.write('after', app_state)
