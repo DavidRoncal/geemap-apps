@@ -14,9 +14,8 @@ def app():
     Map = geemap.Map(center=[-10.54,-76.7519], zoom=9)
     
     # Set the region of interest by simply drawing a polygon on the map
-    region = Map.user_roi
-    if region is None:
-        region = ee.Geometry.Polygon(
+    
+    region = ee.Geometry.Polygon(
         [[[-77.25522258180023, -10.001142906420185],
           [-77.25522258180023, -11.006411564927092],
           [-76.21323802369476, -11.006411564927092],
