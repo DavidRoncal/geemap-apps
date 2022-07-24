@@ -2,7 +2,6 @@ import streamlit as st
 import geemap.foliumap as geemap
 import os
 import ee
-ee.Initialize()
 
 def app():
     st.title("Imágen Satelital Raura")
