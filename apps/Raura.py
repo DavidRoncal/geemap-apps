@@ -11,12 +11,12 @@ def app():
 
     basemap = st.selectbox("Seleccionar un mapa base", keys)
     
-    Map = geemap.Map(center=[-10.4659,-76.7519], zoom=11, height='750px')
+    Map = geemap.Map(center=[-10.53,-76.7519], zoom=11)
     Map.add_basemap(basemap)
     # Add Earth Engine dataset
     Raura_RGB = ee.Image('users/davidroncal123/Imagen_truecolor_geo')
     Raura_INF = ee.Image('users/davidroncal123/Imagen_infrarojo_geo')
-    dem = ee.Image('USGS/SRTMGL1_003')
+    
     table = ee.FeatureCollection("users/davidroncal123/AEA_RAURA")
 
 
@@ -34,7 +34,7 @@ def app():
 
 
     # Add Earth Engine layers to Map
-    Map.addLayer(dem, vis_params2, 'STRM DEM', False, 0.7)
+ 
     Map.addLayer(Raura_RGB.clip(table), vis_params, 'Raura RGB')
     Map.addLayer(Raura_INF.clip(table), vis_params, 'Raura Infrarojo')
-    Map.to_streamlit(height=800)
+    Map.to_streamlit(height=650)
