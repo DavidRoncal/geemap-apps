@@ -11,7 +11,7 @@ def app():
     basemap = st.selectbox("Seleccionar un mapa base", keys)
     table = ee.FeatureCollection("users/davidroncal123/AEA_RAURA")
     
-    Map = geemap.Map()
+    
     Map = geemap.Map(center=[-10.53,-76.7519], zoom=11)
     Map.add_basemap(basemap)
     # Add Earth Engine dataset
