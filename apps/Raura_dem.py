@@ -12,7 +12,7 @@ def app():
 
     Map = geemap.Map()
     Map.add_basemap('HYBRID')
-    Map = geemap.Map(center=[-10.53,-76.7519], zoom=11)
+    Map.centerObject(table, 11)
     
     # Set the region of interest by simply drawing a polygon on the map
     
